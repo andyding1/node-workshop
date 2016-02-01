@@ -41,5 +41,5 @@ function numberGuessArray(answerArray){
         
     });
 }
-    
+
 numberGuess();
