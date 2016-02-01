@@ -25,7 +25,7 @@ setTimeout(function(){
                 request("https://maps.googleapis.com/maps/api/geocode/json?address=" + result.location, function(err, res, body){
                     if (!err){
                         var addressInfo = JSON.parse(body);
-                        console.log("The location provided is at: " + addressInfo['results'][0].geometry.location.lat + " x " + addressInfo['results'][0].geometry.location.lng);
+                        console.log("The location provided is at: " + addressInfo['results'][0].geometry.location.lat.toFixed(2) + " x " + addressInfo['results'][0].geometry.location.lng.toFixed(2));
                     }
                     else {
                         console.log("there was an error in the google map api: " + err);
